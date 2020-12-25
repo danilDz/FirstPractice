@@ -2,7 +2,7 @@
 
 let numberOfFilms;
 
-numberOfFilms=prompt('Сколько фильмов вы уже посмотрели?');
+numberOfFilms= +prompt('Сколько фильмов вы уже посмотрели?','');
 
 let personalMovieDB={
     count: numberOfFilms,
@@ -16,16 +16,12 @@ let movie1,
     movie2,
     rate1,
     rate2;
-movie1=prompt('Один из последних просмотренных фильмов.');
-rate1=prompt('На сколько вы его оцените?');
-movie2=prompt('Один из последних просмотренных фильмов.');
-rate2=prompt('На сколько вы его оцените?');
+movie1=prompt('Один из последних просмотренных фильмов.','');
+rate1=prompt('На сколько вы его оцените?','');
+movie2=prompt('Один из последних просмотренных фильмов.','');
+rate2=prompt('На сколько вы его оцените?','');
 
-personalMovieDB={
-    movies:{
-        movie1:rate1,
-        movie2:rate2
-    }
-};
+personalMovieDB.movies[movie1]=rate1;
+personalMovieDB.movies[movie2]=rate2;
 
 console.log(personalMovieDB);
